@@ -1,11 +1,21 @@
 {
-    "token": "",
-    "NameServer": "World of Warcraft",
-    "channelId": "",
-    "mysql": {
-        "host": "127.0.0.1",
-        "user": "root",
-        "password": "ascent",
-        "database": "eluna_auth"
-    }
+	"token": "",
+	"prefix": "!",
+	"clientId": "",
+	"guildId": "", 
+	"mysql": {
+		"auth": {
+			"host": "127.0.0.1",
+			"user": "root",
+			"password": "ascent",
+			"database": "auth"
+		},
+		"characters": {
+			"host": "127.0.0.1",
+			"user": "root",
+			"password": "ascent",
+			"database": "characters"
+		}
+	},
+	"realmlist": "logon.wowregister.com"
 }

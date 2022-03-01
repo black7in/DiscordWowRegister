@@ -1,9 +1,18 @@
 {
+  "name": "discordwowregister",
+  "version": "1.0.0",
+  "description": "Bot de Discord para registrar cuentas en un servidor de Wow",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "black7in",
+  "license": "ISC",
   "dependencies": {
-    "@discordjs/builders": "^0.9.0",
-    "@discordjs/rest": "^0.1.0-canary.0",
-    "discord-api-types": "^0.25.2",
-    "discord.js": "^13.3.1",
+    "@discordjs/builders": "^0.12.0",
+    "@discordjs/rest": "^0.3.0",
+    "discord-api-types": "^0.27.3",
+    "discord.js": "^13.6.0",
     "mysql": "^2.18.1",
     "trinitycore-srp6": "^1.0.3"
   }
