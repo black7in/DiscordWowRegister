@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'ready',
+	name: 'clientReady',
 	once: true,
 	description: "Inicia el servidor",
 	execute(client) {	

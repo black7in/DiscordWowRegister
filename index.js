@@ -1,11 +1,15 @@
 const fs = require('fs');
-const { Client, Intents, Collection } = require('discord.js');
+const { Client, GatewayIntentBits, Partials, Collection, Routes, MessageFlags } = require('discord.js');
 const { REST } = require('@discordjs/rest');
-const { Routes } = require('discord-api-types/v9');
 const { token, clientId, guildId } = require('./config.json');
 const client = new Client({
-    partials: ['MESSAGE', 'CHANNEL', 'REACTION'],  
-    intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES, Intents.FLAGS.DIRECT_MESSAGES]
+    partials: [Partials.Message, Partials.Channel, Partials.Reaction],
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.DirectMessages,
+        GatewayIntentBits.MessageContent
+    ]
 });
 
 const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
@@ -29,7 +33,7 @@ for (const file of commandFiles) {
     client.commands.set(command.data.name, command);
 }
 
-const rest = new REST({ version: '9' }).setToken(token);
+const rest = new REST({ version: '10' }).setToken(token);
 rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
 .then(() => console.log('Comandos registrados con éxito.'))
 .catch(console.error);
@@ -45,7 +49,7 @@ client.on('interactionCreate', async interaction => {
 		await command.execute(interaction);
 	} catch (error) {
 		console.error(error);
-		await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+		await interaction.reply({ content: 'There was an error while executing this command!', flags: MessageFlags.Ephemeral });
 	}
 });
 

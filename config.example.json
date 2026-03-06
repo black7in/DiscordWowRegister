@@ -1,0 +1,26 @@
+{
+	"token": "TU_TOKEN_DE_DISCORD",
+	"clientId": "ID_DE_LA_APLICACION_BOT",
+	"guildId": "ID_DE_TU_SERVIDOR",
+	"mysql": {
+		"auth": {
+			"host": "127.0.0.1",
+			"user": "root",
+			"password": "tu_password",
+			"database": "auth"
+		},
+		"characters": {
+			"host": "127.0.0.1",
+			"user": "root",
+			"password": "tu_password",
+			"database": "characters"
+		}
+	},
+	"realmlist": "logon.tuservidor.com",
+	"soap": {
+		"host": "127.0.0.1",
+		"port": 7878,
+		"user": "soapuser",
+		"password": "abcd1234"
+	}
+}

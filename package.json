@@ -9,11 +9,11 @@
   "author": "black7in",
   "license": "ISC",
   "dependencies": {
-    "@discordjs/builders": "^0.12.0",
-    "@discordjs/rest": "^0.3.0",
-    "discord-api-types": "^0.27.3",
-    "discord.js": "^13.6.0",
-    "mysql": "^2.18.1",
-    "trinitycore-srp6": "^1.0.3"
+    "@discordjs/builders": "^1.13.1",
+    "@discordjs/rest": "^2.6.0",
+    "discord-api-types": "^0.38.41",
+    "discord.js": "^14.25.1",
+    "mysql2": "^3.14.0",
+    "trinitycore-srp6": "^1.1.1"
   }
 }

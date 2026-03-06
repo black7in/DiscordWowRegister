@@ -1,5 +1,4 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageEmbed  } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -18,7 +17,7 @@ module.exports = {
                     kill[index] += result[index].totalkills;
                 }
             }
-            const embed = new MessageEmbed()
+            const embed = new EmbedBuilder()
             .setColor('#FFF000')
             .setTitle('TOP PVP KILL')
             .setAuthor({ name: 'WowRegister', iconURL: 'https://i.imgur.com/OTnUWRz.png'})
